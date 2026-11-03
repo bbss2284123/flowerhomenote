@@ -166,8 +166,8 @@ test("하루 발행 상한과 빈 광고 값", () => {
   assert.equal(siteConfig.ga4Id, "");
   assert.equal(siteConfig.cloudflareWebAnalyticsToken, "");
   assert.equal(siteConfig.verification.google, "");
-  assert.equal(siteConfig.verification.naver, "");
-  assert.equal(siteConfig.verification.bing, "");
+  assert.equal(siteConfig.verification.naver, "34efb706d4fe9f1c1026f2148183ed9428533795");
+  assert.equal(siteConfig.verification.bing, "4295E7324F92E663BAC5DF1CD96A3E7D");
 });
 
 test("현재 글은 검수를 통과", () => {

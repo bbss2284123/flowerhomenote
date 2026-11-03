@@ -50,9 +50,9 @@ GitHub Actions `Scheduled publish` 가 30분마다 07:00–22:30 KST 에 돌아�
 | `adsense.slots.*` | 본문·사이드 슬롯 ID |
 | `ga4Id` | GA4 측정 ID (`G-`) |
 | `cloudflareWebAnalyticsToken` | Cloudflare Web Analytics 토큰 |
-| `verification.google` | Google Search Console 인증 코드 |
-| `verification.naver` | 네이버 서치어드바이저 인증 코드 |
-| `verification.bing` | Bing 웹마스터 인증 코드 |
+| `verification.google` | Google Search Console 메타 코드. 지금은 DNS로 인증하므로 비워 둡니다. |
+| `verification.naver` | 네이버 서치어드바이저 인증 코드. 들어가 있으면 `naver-site-verification` 메타를 넣습니다. |
+| `verification.bing` | Bing 웹마스터 인증 코드. 들어가 있으면 `msvalidate.01` 메타를 넣습니다. |
 | `indexNowKey` | IndexNow 키. 비우면 핑하지 않습니다. |
 
 로컬에서만 GA를 덮어쓰려면 `.env` 에 `PUBLIC_GA_ID` 를 넣습니다. 예시는 `.env.example` 입니다.
