@@ -1,0 +1,50 @@
+---
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import { siteConfig, categoryById } from "../../site.config";
+import { allPublished, cardExcerpt, postPath } from "../lib/posts";
+import { formatDot } from "../lib/dates";
+
+const posts = (await allPublished()).filter((post) => post.data.category === "flowers" || post.data.category === "plants");
+const flowers = categoryById("flowers");
+const plants = categoryById("plants");
+---
+<Base title="꽃·식물" description="꽃·꽃말과 식물 키우기를 함께 보는 페이지입니다." path="/flowers-plants/" current="flowers-plants">
+  <main id="content" class="wrap page" data-pagefind-body>
+    <header class="page-head">
+      <p class="kicker">꽃 · 식물</p>
+      <h1>꽃과 식물</h1>
+      <p>상위 분류는 꽃·꽃말과 식물 키우기 두 개입니다. 이 페이지는 둘을 같이 보여 줍니다.</p>
+    </header>
+    <div class="split-list">
+      <article>
+        <img src="/icons/flowers.svg" alt="" width="48" height="48" />
+        <h2><a href="/category/flowers/">{flowers?.name}</a></h2>
+        <p>{flowers?.description}</p>
+      </article>
+      <article>
+        <img src="/icons/plants.svg" alt="" width="48" height="48" />
+        <h2><a href="/category/plants/">{plants?.name}</a></h2>
+        <p>{plants?.description}</p>
+      </article>
+    </div>
+    {posts.length === 0 ? (
+      <p class="empty-board">이 두 분류의 발행 글이 아직 없습니다.</p>
+    ) : (
+      <div class="cards">
+        {posts.map((post) => (
+          <Card
+            href={postPath(post.id)}
+            title={post.data.title}
+            excerpt={cardExcerpt(post.data.description)}
+            category={post.data.category}
+            image={`/thumb/posts/${post.id}/card.png`}
+            overlayTitle={post.data.thumbTitle || post.data.title}
+            overlaySub={post.data.thumbSubtitle || post.data.main_query}
+            date={formatDot(post.data.date)}
+          />
+        ))}
+      </div>
+    )}
+  </main>
+</Base>

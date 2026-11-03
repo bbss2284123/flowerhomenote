@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import { siteConfig } from "../../site.config";
+import { allPublished, cardExcerpt, postPath } from "../lib/posts";
+import { formatDot } from "../lib/dates";
+
+const posts = await allPublished();
+---
+<Base title="전체 글" description={`${siteConfig.name}에 발행된 글`} path="/archive/">
+  <main id="content" class="wrap page" data-pagefind-body>
+    <header class="page-head">
+      <h1>전체 글</h1>
+      <p>검수를 마치고 공개 시각이 지난 글만 나옵니다. 초안과 예약 글은 빠집니다.</p>
+    </header>
+    {posts.length === 0 ? (
+      <p class="empty-board">아직 발행된 글이 없습니다.</p>
+    ) : (
+      <div class="cards">
+        {posts.map((post, index) => (
+          <Card
+            href={postPath(post.id)}
+            title={post.data.title}
+            excerpt={cardExcerpt(post.data.description)}
+            category={post.data.category}
+            image={`/thumb/posts/${post.id}/card.png`}
+            overlayTitle={post.data.thumbTitle || post.data.title}
+            overlaySub={post.data.thumbSubtitle || post.data.main_query}
+            date={formatDot(post.data.date)}
+            eager={index === 0}
+          />
+        ))}
+      </div>
+    )}
+  </main>
+</Base>

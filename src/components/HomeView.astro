@@ -1,0 +1,117 @@
+---
+import { siteConfig } from "../../site.config";
+import Card from "./Card.astro";
+
+interface CardData {
+  href: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  image: string;
+  alt?: string;
+  overlayTitle: string;
+  overlaySub: string;
+  date?: string;
+  categoryLabel?: string;
+}
+interface Props {
+  cards: CardData[];
+  topicMode?: boolean;
+  devHints?: boolean;
+}
+const { cards, topicMode = false, devHints = false } = Astro.props;
+const month = new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", month: "long" }).format(new Date());
+const pills = [
+  { label: "꽃·식물", href: "/flowers-plants/", icon: "flowers" },
+  { label: "가드닝", href: "/category/gardening/", icon: "gardening" },
+  { label: "반려동물", href: "/category/pets/", icon: "pets" },
+  { label: "살림·청소", href: "/category/home/", icon: "home" },
+  { label: "정리·수납", href: "/hub/storage/", icon: "storage" },
+];
+---
+<main id="content" class="wrap home" data-pagefind-body>
+  <section class="hero-banner" aria-label="소개">
+    <div class="hero-copy">
+      <p class="kicker">{siteConfig.banner.kicker}</p>
+      <h1>{siteConfig.banner.title}</h1>
+      <p>{siteConfig.banner.sub}</p>
+    </div>
+    <div class="hero-photo">
+      <img src="/brand/editorial.webp" alt="" width="1600" height="500" fetchpriority="high" />
+    </div>
+  </section>
+  <p class="season-line">
+    {month} 실내식물 관리와 겨울맞이 집 관리는
+    <a href="/hub/month/">이번 달 필요한 관리</a>와
+    <a href="/hub/season/">계절별 추천</a>에서 모읍니다.
+  </p>
+  <nav class="pills" aria-label="바로가기">
+    {pills.map((pill) => (
+      <a class="pill" href={pill.href}>
+        <img src={`/icons/${pill.icon}.svg`} alt="" width="36" height="36" />
+        <span>{pill.label}</span>
+      </a>
+    ))}
+  </nav>
+  <nav class="hub-row" aria-label="필터">
+    {siteConfig.hubs.filter((hub) => !hub.filter).map((hub) => (
+      <a href={`/hub/${hub.id}/`}>{hub.name}</a>
+    ))}
+  </nav>
+  <div class="home-grid">
+    <section>
+      <div class="section-head">
+        <h2>최근 올라온 글</h2>
+        <a href="/archive/">전체 글 보기</a>
+      </div>
+      {topicMode && (
+        <p class="section-note">발행된 글이 없습니다. 아래 카드는 편집자 추천 주제이며 글, 날짜, 조회수가 아닙니다.</p>
+      )}
+      <div class="cards">
+        {cards.map((card, index) => (
+          <Card {...card} eager={index < 2} />
+        ))}
+      </div>
+      {devHints && (
+        <p class="dev-note">
+          개발 서버에서만 초안을 볼 수 있습니다.
+          <a href="/draft/draft-plant-care/">식물</a>
+          <a href="/draft/draft-cleaning/">청소</a>
+          <a href="/draft/draft-pets/">반려동물</a>
+          <a href="/draft/draft-season/">계절</a>
+        </p>
+      )}
+    </section>
+    <aside class="side">
+      <form class="side-search" action="/search/" method="get">
+        <input type="search" name="q" placeholder="궁금한 내용을 검색해 보세요" aria-label="검색어" />
+        <button type="submit" aria-label="검색">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+      <section class="panel">
+        <h2>많이 찾는 주제</h2>
+        <p class="caption">편집자 추천 · 조회수가 아닙니다</p>
+        {siteConfig.editorTopics.map((topic) => (
+          <a class="topic-row" href={`/search/?q=${encodeURIComponent(topic.q)}`}>
+            <img src={`/icons/${topic.icon}.svg`} alt="" width="22" height="22" />
+            <span>{topic.label}</span>
+          </a>
+        ))}
+      </section>
+      <section class="bookmark-card">
+        <h2><span aria-hidden="true">☆</span> 즐겨찾기로 편하게</h2>
+        <p>자주 찾는 관리법을 언제든 빠르게 확인하세요.</p>
+        <button class="bookmark-btn" type="button" data-open-bookmark>브라우저에 추가하는 방법</button>
+      </section>
+    </aside>
+  </div>
+  <section class="finder">
+    <h2>문제로 찾기</h2>
+    <div class="chip-row">
+      {siteConfig.problemLinks.map((item) => (
+        <a href={`/search/?q=${encodeURIComponent(item.q)}`}>{item.label}</a>
+      ))}
+    </div>
+  </section>
+</main>

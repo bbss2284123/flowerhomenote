@@ -1,0 +1,21 @@
+---
+interface Props {
+  id?: string;
+  src: string;
+  alt: string;
+  caption?: string;
+  type?: "original-photo" | "licensed" | "illustration";
+}
+const { src, alt, caption = "", type = "illustration" } = Astro.props;
+const label = type === "original-photo" ? "직접 촬영" : type === "licensed" ? "사용 허가 사진" : "장식 이미지 · 실물 사진 아님";
+---
+<figure class={`shot shot-${type}`}>
+  <div class="shot-stage">
+    <button class="shot-open" type="button" data-full={src} data-alt={alt} aria-label={`${alt} 크게 보기`}>
+      <img src={src} alt={alt} loading="lazy" />
+    </button>
+    <span class="shot-badge">{label}</span>
+    <slot />
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
