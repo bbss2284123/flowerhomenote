@@ -192,7 +192,9 @@ button, input { font: inherit; color: inherit; }
   line-height: 1;
 }
 .thumb-chip img { width: 18px; height: 18px; }
+.card-overlay h3,
 .card-overlay strong {
+  margin: 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -206,6 +208,7 @@ button, input { font: inherit; color: inherit; }
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
 }
 .hero-figure .card-overlay { padding: 28px 32px 26px; gap: 12px; }
+.hero-figure .card-overlay h3,
 .hero-figure .card-overlay strong { font-size: 46px; max-width: 14em; }
 .hero-figure .thumb-chip { min-height: 32px; font-size: 14px; padding: 0 12px 0 6px; }
 .hero-figure .thumb-chip img { width: 20px; height: 20px; }
@@ -451,7 +454,9 @@ dialog ol { padding-left: 1.2em; }
   .hero-copy h1 { font-size: 26px; }
   .pills { grid-template-columns: 1fr 1fr; }
   .cards { grid-template-columns: 1fr; }
+  .card-overlay h3,
   .card-overlay strong { font-size: 32px; }
+  .hero-figure .card-overlay h3,
   .hero-figure .card-overlay strong { font-size: 34px; }
   .article h1, .page-head h1 { font-size: 28px; }
   .split-list, .prevnext { grid-template-columns: 1fr; }

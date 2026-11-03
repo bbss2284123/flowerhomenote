@@ -5,18 +5,21 @@ import sharp from "sharp";
 import { siteConfig } from "../site.config";
 import { backgroundPath, renderBackground, renderCard, renderOg, variantCount } from "../src/thumbnails/render";
 
+async function writeSet(dir: string, id: string) {
+  const count = variantCount(id);
+  for (let variant = 0; variant < count; variant += 1) {
+    const png = await renderBackground(id, variant);
+    writeFileSync(path.join(dir, `${id}-${variant}.png`), png);
+    if (variant === 0) writeFileSync(path.join(dir, `${id}.png`), png);
+  }
+  console.log(`배경 ${id} ${count}장`);
+}
+
 async function writeBackgrounds() {
   const dir = path.join(process.cwd(), "public/thumb/backgrounds");
   mkdirSync(dir, { recursive: true });
-  for (const category of siteConfig.categories) {
-    const count = variantCount(category.id);
-    for (let variant = 0; variant < count; variant += 1) {
-      const png = await renderBackground(category.id, variant);
-      writeFileSync(path.join(dir, `${category.id}-${variant}.png`), png);
-      if (variant === 0) writeFileSync(path.join(dir, `${category.id}.png`), png);
-    }
-    console.log(`배경 ${category.id} ${count}장`);
-  }
+  for (const category of siteConfig.categories) await writeSet(dir, category.id);
+  await writeSet(dir, "storage");
 }
 
 async function writeFavicons() {

@@ -12,7 +12,7 @@ export const templateNames: Record<(typeof templates)[number], string> = {
   C: "반려동물 생활",
   D: "계절 가이드",
 };
-export const sourceTypes = ["original-photo", "licensed", "illustration"] as const;
+export const sourceTypes = ["original-photo", "licensed", "illustration", "ai_generated"] as const;
 export const riskLevels = ["low", "medium", "high"] as const;
 export const reviewStatuses = ["draft", "needs-review", "approved", "published"] as const;
 
@@ -34,7 +34,7 @@ export const postImageSchema = z
         message: "직접 촬영이 아니면 license_proof가 필요합니다.",
       });
     }
-    if (image.source_type === "illustration" && /실제\s*(사진|촬영)|직접\s*촬영/.test(`${image.alt}\n${image.caption ?? ""}`)) {
+    if ((image.source_type === "illustration" || image.source_type === "ai_generated") && /실제\s*(사진|촬영)|직접\s*촬영/.test(`${image.alt}\n${image.caption ?? ""}`)) {
       ctx.addIssue({
         code: "custom",
         message: "장식 이미지를 실제 촬영이라고 적지 않습니다.",

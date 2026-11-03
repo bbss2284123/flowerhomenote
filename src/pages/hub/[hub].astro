@@ -35,6 +35,14 @@ const jsonLd = {
       </div>
       <p>{meta?.description}</p>
     </header>
+    {hub === "storage" && (
+      <figure class="hero-figure">
+        <span class="card-media">
+          <img src="/thumb/backgrounds/storage-0.png" alt="정리된 선반을 떠올리게 하는 AI 장식 배경. 실제 집 사진이 아닙니다." width="1200" height="675" />
+        </span>
+        <figcaption>AI로 만든 장식 배경입니다. 실제 수납 결과가 아닙니다.</figcaption>
+      </figure>
+    )}
     {posts.length === 0 ? (
       <p class="empty-board">이 허브의 발행 글이 아직 없습니다.</p>
     ) : (

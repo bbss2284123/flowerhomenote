@@ -142,12 +142,13 @@ test("Shot 대체 텍스트가 다르면 막음", () => {
   assert.ok(errors.some((message) => message.includes("alt")));
 });
 
-test("같은 한국 날짜에 발행 글이 세 편이면 막음", () => {
+test("같은 한국 날짜에 발행 글이 두 편이면 막음", () => {
   const row = (id: string, day: string) => ({ id, data: { draft: false, date: day } });
-  const errors = dailyCapErrors([row("a", "2026-11-03"), row("b", "2026-11-03"), row("c", "2026-11-03")], 2);
+  const errors = dailyCapErrors([row("a", "2026-11-03"), row("b", "2026-11-03")]);
   assert.equal(errors.length, 1);
+  assert.match(errors[0], /하루 1편/);
   assert.equal(
-    dailyCapErrors([row("a", "2026-11-03"), row("b", "2026-11-03"), { id: "draft", data: { draft: true, date: "2026-11-03" } }], 2).length,
+    dailyCapErrors([row("a", "2026-11-03"), { id: "draft", data: { draft: true, date: "2026-11-03" } }]).length,
     0,
   );
 });
@@ -159,7 +160,7 @@ test("미래 날짜는 공개 전", () => {
 });
 
 test("하루 발행 상한과 빈 광고 값", () => {
-  assert.equal(siteConfig.maxPostsPerDay, 2);
+  assert.equal(siteConfig.maxPostsPerDay, 1);
   assert.equal(siteConfig.url, "https://flowerhomenote.com");
   assert.equal(siteConfig.adsense.publisherId, "");
   assert.equal(siteConfig.ga4Id, "");

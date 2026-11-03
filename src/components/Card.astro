@@ -14,19 +14,15 @@ interface Props {
   categoryLabel?: string;
   eager?: boolean;
 }
-const { href, title, excerpt, category, image, alt = "", overlayTitle, date, categoryLabel, eager = false } = Astro.props;
+const { href, title, excerpt, category, image, alt = "", overlayTitle, categoryLabel, eager = false } = Astro.props;
 const meta = categoryById(category);
 const label = categoryLabel || meta?.name || category;
 ---
 <a class="card" href={href} data-category={category}>
   <span class="card-media">
     <img src={image} alt={alt} width="1200" height="675" loading={eager ? "eager" : "lazy"} decoding="async" />
-    <span class="card-overlay" aria-hidden="true">
-      <span class="thumb-chip">
-        <img src={`/icons/${category}.svg`} alt="" width="16" height="16" />
-        {label}
-      </span>
-      <strong>{overlayTitle}</strong>
+    <span class="card-overlay">
+      <h3>{overlayTitle || title}</h3>
     </span>
   </span>
   <span class="card-body">
@@ -34,8 +30,6 @@ const label = categoryLabel || meta?.name || category;
       <img src={`/icons/${category}.svg`} alt="" width="16" height="16" />
       {label}
     </span>
-    <span class="card-title">{title}</span>
     <span class="card-excerpt">{excerpt}</span>
-    {date && <span class="card-date">{date}</span>}
   </span>
 </a>

@@ -270,8 +270,8 @@ export function imageRightsErrors(data: Pick<PostFrontmatter, "images">, body: s
     if (image.source_type !== "original-photo" && !image.license_proof?.trim()) {
       errors.push(`${image.path} 직접 촬영이 아니면 license_proof가 필요합니다.`);
     }
-    if (image.source_type === "illustration" && /실제\s*(사진|촬영)|직접\s*촬영/.test(blob)) {
-      errors.push(`${image.path} 장식 이미지를 실제 촬영이라고 적지 않습니다.`);
+    if ((image.source_type === "illustration" || image.source_type === "ai_generated") && /실제\s*(사진|촬영)|직접\s*촬영/.test(blob)) {
+      errors.push(`${image.path} 장식 이미지나 AI 배경을 실제 촬영이라고 적지 않습니다.`);
     }
     const beforeAfter = /전후\s*(사진|비교|결과)|사용\s*전후|청소\s*전후|비포\s*애프터|before\s*[- ]?after/i;
     if (image.source_type !== "original-photo" && (image.role === "before-after" || beforeAfter.test(blob))) {

@@ -36,7 +36,7 @@ npm run preview
 
 GitHub Actions `Scheduled publish` 가 30분마다 07:00–22:30 KST 에 돌아갑니다. 저장소 비밀 `CF_PAGES_DEPLOY_HOOK` 에 Cloudflare Pages 배포 훅 URL을 넣습니다. 비밀이 없으면 배포를 건너뛰고 성공으로 끝납니다.
 
-초안(`draft: true`)은 배포 대상이 아닙니다. `publishAt`(없으면 `date`)이 아직 오지 않은 글은 빌드에 나오지 않고, 그 시각이 지난 뒤의 예약 실행이 배포 훅을 호출합니다. 같은 한국 날짜에 공개되는 글은 `site.config.ts` 의 `maxPostsPerDay`(2)까지입니다.
+초안(`draft: true`)은 배포 대상이 아닙니다. `publishAt`(없으면 `date`)이 아직 오지 않은 글은 빌드에 나오지 않고, 그 시각이 지난 뒤의 예약 실행이 배포 훅을 호출합니다. 같은 한국 날짜에 공개되는 글은 `site.config.ts` 의 `maxPostsPerDay`(1)까지입니다.
 
 ## 주인님이 채울 값
 
@@ -107,7 +107,7 @@ GitHub Actions `Scheduled publish` 가 30분마다 07:00–22:30 KST 에 돌아�
 4. 대표 검색어 `main_query` 를 제목, 설명, 첫 문단에 넣습니다. 설명은 80–120자입니다.
 5. 출처마다 `checked_at` 을 적습니다. 이미지는 `alt`, `source_type` 이 필요하고, 직접 촬영이 아니면 `license_proof` 가 필요합니다.
 6. 위험도가 `high` 이면 `verified_by` 가 필요합니다. `review_status` 가 `approved` 또는 `published` 이고 `draft: false` 일 때만 발행됩니다.
-7. 같은 한국 날짜의 발행 글은 2편까지입니다. 그 전이면 `publishAt` 을 미래로 둡니다.
+7. 같은 한국 날짜의 발행 글은 1편까지입니다. 그 전이면 `publishAt` 을 미래로 둡니다.
 
 레이아웃만 보려면 초안 네 편을 개발 서버에서 엽니다. 그 문장은 관리법이 아닙니다.
 
@@ -125,7 +125,7 @@ GitHub Actions `Scheduled publish` 가 30분마다 07:00–22:30 KST 에 돌아�
 - `public/brand/samples/` 의 여섯 장은 AI 샘플입니다. 글 사진으로 쓰면 검수가 멈춥니다.
 - 이모지, 가짜 조회수, 뉴스레터, 로그인은 넣지 않습니다.
 
-대표 이미지는 브랜드 키트에서 글자를 빼고 자른 16:9 배경입니다. 분류마다 장면이 여러 장이고, 제목과 분류 칩은 그 위에 HTML로 올립니다. 샘플 썸네일 원본은 글 사진이 아닙니다. 다른 그림이 필요하면 `thumbBackground` 와 `images` 에 그 파일 경로를 적습니다.
+대표 이미지는 글자 없는 16:9 배경입니다. 키트에서 제목을 잘라 낸 장면과, `public/brand/backgrounds` 의 AI 장식(`source_type: ai_generated`)을 함께 씁니다. AI 배경은 현장 사진이나 관리 결과가 아닙니다. 카드에서는 제목을 사진 위 HTML로 한 번만 보여주고, 아래에는 분류와 한 줄 요약만 둡니다. 다른 그림이 필요하면 `thumbBackground` 와 `images` 에 그 파일 경로를 적습니다.
 
 ## 페이지
 

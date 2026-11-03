@@ -4,10 +4,16 @@ interface Props {
   src: string;
   alt: string;
   caption?: string;
-  type?: "original-photo" | "licensed" | "illustration";
+  type?: "original-photo" | "licensed" | "illustration" | "ai_generated";
 }
 const { src, alt, caption = "", type = "illustration" } = Astro.props;
-const label = type === "original-photo" ? "직접 촬영" : type === "licensed" ? "사용 허가 사진" : "장식 이미지 · 실물 사진 아님";
+const label = type === "original-photo"
+  ? "직접 촬영"
+  : type === "licensed"
+    ? "사용 허가 사진"
+    : type === "ai_generated"
+      ? "AI 장식 · 실물 사진 아님"
+      : "장식 이미지 · 실물 사진 아님";
 ---
 <figure class={`shot shot-${type}`}>
   <div class="shot-stage">
