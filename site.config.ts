@@ -274,12 +274,12 @@ export const siteConfig = {
   /** TODO: Cloudflare Web Analytics 토큰. 비우면 비콘을 넣지 않습니다. */
   cloudflareWebAnalyticsToken: "",
   verification: {
-    /** TODO: Google Search Console 인증 코드 */
+    /** Google은 DNS로 인증합니다. 메타 코드는 비워 둡니다. */
     google: "",
-    /** TODO: 네이버 서치어드바이저 인증 코드 */
-    naver: "",
-    /** TODO: Bing 웹마스터 인증 코드 */
-    bing: "",
+    /** 네이버 서치어드바이저 */
+    naver: "34efb706d4fe9f1c1026f2148183ed9428533795",
+    /** Bing 웹마스터 */
+    bing: "4295E7324F92E663BAC5DF1CD96A3E7D",
   },
 } as const;
 
