@@ -14,7 +14,7 @@ const cards = topicMode
       excerpt: topic.excerpt,
       category: topic.category,
       categoryLabel: topic.categoryLabel,
-      image: `/thumb/backgrounds/${topic.category}.png`,
+      image: `/thumb/backgrounds/${topic.category}-${topic.variant ?? 0}.png`,
       alt: "",
       overlayTitle: topic.label,
       overlaySub: topic.excerpt,

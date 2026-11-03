@@ -50,6 +50,8 @@ export interface TopicLink {
   excerpt: string;
   category: string;
   categoryLabel: string;
+  /** 같은 분류 안에서 겹치지 않게 고른 배경 번호 */
+  variant?: number;
 }
 
 export const siteConfig = {
@@ -242,12 +244,12 @@ export const siteConfig = {
    * 브랜드 키트의 예시 제목이며 글, 날짜, 조회수가 아닙니다.
    */
   homeTopics: [
-    { label: "수국 예쁘게 키우는 법", q: "수국 키우기", icon: "flowers", excerpt: "물주기부터 가지치기까지", category: "flowers", categoryLabel: "꽃·식물" },
-    { label: "몬스테라 잎이 노랗게 될 때", q: "몬스테라 잎", icon: "plants", excerpt: "잎이 누렇게 변하는 이유", category: "plants", categoryLabel: "꽃·식물" },
-    { label: "고양이 털 관리 쉽게 하는 법", q: "고양이 털", icon: "pets", excerpt: "빗질부터 청소까지", category: "pets", categoryLabel: "반려동물" },
-    { label: "베란다 허브 키우기 입문", q: "베란다 허브", icon: "gardening", excerpt: "바질·로즈마리 시작하기", category: "gardening", categoryLabel: "가드닝" },
-    { label: "욕실 곰팡이 깔끔하게 없애는 법", q: "욕실 곰팡이", icon: "home", excerpt: "예방과 관리 방법", category: "home", categoryLabel: "살림·청소" },
-    { label: "집 청소 루틴 쉽게 시작하기", q: "집 청소", icon: "home", excerpt: "주방과 거실을 차근차근", category: "home", categoryLabel: "살림·청소" },
+    { label: "수국 예쁘게 키우는 법", q: "수국 키우기", icon: "flowers", excerpt: "물주기부터 가지치기까지", category: "flowers", categoryLabel: "꽃·식물", variant: 0 },
+    { label: "몬스테라 잎이 노랗게 될 때", q: "몬스테라 잎", icon: "plants", excerpt: "잎이 누렇게 변하는 이유", category: "plants", categoryLabel: "꽃·식물", variant: 0 },
+    { label: "고양이 털 관리 쉽게 하는 법", q: "고양이 털", icon: "pets", excerpt: "빗질부터 청소까지", category: "pets", categoryLabel: "반려동물", variant: 0 },
+    { label: "베란다 허브 키우기 입문", q: "베란다 허브", icon: "gardening", excerpt: "바질·로즈마리 시작하기", category: "gardening", categoryLabel: "가드닝", variant: 0 },
+    { label: "욕실 곰팡이 깔끔하게 없애는 법", q: "욕실 곰팡이", icon: "home", excerpt: "예방과 관리 방법", category: "home", categoryLabel: "살림·청소", variant: 0 },
+    { label: "집 청소 루틴 쉽게 시작하기", q: "집 청소", icon: "home", excerpt: "주방과 거실을 차근차근", category: "home", categoryLabel: "살림·청소", variant: 2 },
   ] as TopicLink[],
   problemLinks: [
     { label: "식물 잎", q: "잎이 노랗게" },

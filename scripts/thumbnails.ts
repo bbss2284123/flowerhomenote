@@ -3,15 +3,19 @@ import path from "node:path";
 import matter from "gray-matter";
 import sharp from "sharp";
 import { siteConfig } from "../site.config";
-import { renderBackground, renderCard, renderOg } from "../src/thumbnails/render";
+import { backgroundPath, renderBackground, renderCard, renderOg, variantCount } from "../src/thumbnails/render";
 
 async function writeBackgrounds() {
   const dir = path.join(process.cwd(), "public/thumb/backgrounds");
   mkdirSync(dir, { recursive: true });
   for (const category of siteConfig.categories) {
-    const png = await renderBackground(category.id);
-    writeFileSync(path.join(dir, `${category.id}.png`), png);
-    console.log(`배경 ${category.id}`);
+    const count = variantCount(category.id);
+    for (let variant = 0; variant < count; variant += 1) {
+      const png = await renderBackground(category.id, variant);
+      writeFileSync(path.join(dir, `${category.id}-${variant}.png`), png);
+      if (variant === 0) writeFileSync(path.join(dir, `${category.id}.png`), png);
+    }
+    console.log(`배경 ${category.id} ${count}장`);
   }
 }
 
@@ -48,7 +52,7 @@ async function main() {
       console.log(`${id} 분류 또는 제목이 없어 썸네일을 건너뜁니다.`);
       continue;
     }
-    const background = data.thumbBackground || `/thumb/backgrounds/${data.category}.png`;
+    const background = data.thumbBackground || backgroundPath(data.category, id);
     const card = await renderCard({
       categoryId: data.category,
       title: data.thumbTitle || data.title,

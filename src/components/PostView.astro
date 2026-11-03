@@ -97,10 +97,13 @@ const reviewLabel = { draft: "초안", "needs-review": "검수 필요", approved
     </p>
     <figure class="hero-figure">
       <span class="card-media">
-        <img src={post.data.heroImage} alt={hero?.alt ?? ""} width="1200" height="675" />
+        <img src={`/thumb/posts/${post.id}/card.png`} alt={hero?.alt ?? ""} width="1200" height="675" />
         <span class="card-overlay" aria-hidden="true">
+          <span class="thumb-chip">
+            <img src={`/icons/${post.data.category}.svg`} alt="" width="18" height="18" />
+            {category?.name}
+          </span>
           <strong>{post.data.thumbTitle || post.data.title}</strong>
-          {post.data.thumbSubtitle && <em>{post.data.thumbSubtitle}</em>}
         </span>
       </span>
       {hero?.caption && <figcaption>{hero.caption}</figcaption>}
