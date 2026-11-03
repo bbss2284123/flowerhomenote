@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+import { siteConfig } from "../../site.config";
+---
+<Base title="소개" description={siteConfig.tagline} path="/about/">
+  <main id="content" class="wrap page-narrow" data-pagefind-body>
+    <h1>꽃과살림노트</h1>
+    <p>{siteConfig.tagline}</p>
+    <p>검색한 문제를 먼저 적고, 확인한 순서와 출처를 붙입니다. 회원가입, 뉴스레터, 댓글은 두지 않습니다.</p>
+    <h2>다루는 분류</h2>
+    <ul>
+      {siteConfig.categories.map((category) => (
+        <li><a href={`/category/${category.id}/`}>{category.name}</a> — {category.description}</li>
+      ))}
+    </ul>
+    <h2>같이 보는 허브</h2>
+    <ul>
+      {siteConfig.hubs.map((hub) => (
+        <li><a href={`/hub/${hub.id}/`}>{hub.name}</a> — {hub.description}</li>
+      ))}
+    </ul>
+    <h2>하지 않는 일</h2>
+    <ul>
+      <li>조회수, 댓글 수, 수상 경력을 만들지 않습니다. 고른 글은 편집자 추천이라고 적습니다.</li>
+      <li>구독 창, 로그인, 자동으로 뜨는 창을 두지 않습니다.</li>
+      <li>즐겨찾기는 브라우저에 추가하는 방법만 안내합니다.</li>
+      <li>검증하지 않은 글은 초안으로 두고 발행 목록에 올리지 않습니다.</li>
+    </ul>
+    <p>문의는 <a href="/contact/">문의</a>, 출처를 적는 법은 <a href="/sources/">출처 기준</a>에 있습니다.</p>
+  </main>
+</Base>

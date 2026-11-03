@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import { siteConfig } from "../../site.config";
+---
+<Base title="문의" description="꽃과살림노트 문의" path="/contact/">
+  <main id="content" class="wrap page-narrow" data-pagefind-body>
+    <h1>문의</h1>
+    <p>틀린 내용, 바뀐 공식 안내, 이미지 권리 문제를 알려 주시면 확인일을 다시 적습니다.</p>
+    <p>회원 가입 창은 없습니다. 아래 주소로 메일을 보내 주세요.</p>
+    <p><a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a></p>
+  </main>
+</Base>

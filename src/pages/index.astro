@@ -1,0 +1,58 @@
+---
+import Base from "../layouts/Base.astro";
+import HomeView from "../components/HomeView.astro";
+import { siteConfig, absoluteUrl } from "../../site.config";
+import { allPublished, cardExcerpt, postPath } from "../lib/posts";
+import { formatDot } from "../lib/dates";
+
+const posts = await allPublished();
+const topicMode = posts.length === 0;
+const cards = topicMode
+  ? siteConfig.homeTopics.map((topic) => ({
+      href: `/search/?q=${encodeURIComponent(topic.q)}`,
+      title: topic.label,
+      excerpt: topic.excerpt,
+      category: topic.category,
+      categoryLabel: topic.categoryLabel,
+      image: `/thumb/backgrounds/${topic.category}-${topic.variant ?? 0}.png`,
+      alt: "",
+      overlayTitle: topic.label,
+      overlaySub: topic.excerpt,
+    }))
+  : posts.map((post) => ({
+      href: postPath(post.id),
+      title: post.data.title,
+      excerpt: cardExcerpt(post.data.description),
+      category: post.data.category,
+      image: `/thumb/posts/${post.id}/card.png`,
+      alt: "",
+      overlayTitle: post.data.thumbTitle || post.data.title,
+      overlaySub: post.data.thumbSubtitle || post.data.main_query,
+      date: formatDot(post.data.date),
+    }));
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    description: siteConfig.description,
+    inLanguage: "ko",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteConfig.url}/search/?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: absoluteUrl("/android-chrome-512x512.png"),
+  },
+];
+---
+<Base title={siteConfig.name} description={siteConfig.description} path="/" ogImage="/brand/og-default.png" jsonLd={jsonLd} current="index">
+  <HomeView cards={cards} topicMode={topicMode} devHints={import.meta.env.DEV} />
+</Base>

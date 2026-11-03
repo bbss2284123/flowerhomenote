@@ -1,0 +1,65 @@
+---
+import Base from "../../layouts/Base.astro";
+import Card from "../../components/Card.astro";
+import { siteConfig, hubById, absoluteUrl } from "../../../site.config";
+import { allPublished, cardExcerpt, postPath } from "../../lib/posts";
+import { formatDot } from "../../lib/dates";
+
+export async function getStaticPaths() {
+  const posts = await allPublished();
+  return siteConfig.hubs.map((hub) => ({
+    params: { hub: hub.id },
+    props: { posts: posts.filter((post) => post.data.hubs.includes(hub.id)) },
+  }));
+}
+const { hub } = Astro.params;
+const { posts } = Astro.props;
+const meta = hubById(hub ?? "");
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: meta?.name,
+  description: meta?.description,
+  url: absoluteUrl(`/hub/${hub}/`),
+};
+---
+<Base title={meta?.name ?? "허브"} description={meta?.description ?? siteConfig.description} path={`/hub/${hub}/`} current={hub} jsonLd={[jsonLd]}>
+  <main id="content" class="wrap page" data-pagefind-body>
+    <header class="page-head">
+      <div class="icon-title">
+        <img src={`/icons/${meta?.icon ?? "flowers"}.svg`} alt="" width="56" height="56" />
+        <div>
+          <p class="kicker">{meta?.filter ? "살림·청소 안의 필터" : "허브"}</p>
+          <h1>{meta?.name}</h1>
+        </div>
+      </div>
+      <p>{meta?.description}</p>
+    </header>
+    {hub === "storage" && (
+      <figure class="hero-figure">
+        <span class="card-media">
+          <img src="/thumb/backgrounds/storage-0.png" alt="정리된 선반을 떠올리게 하는 AI 장식 배경. 실제 집 사진이 아닙니다." width="1200" height="675" />
+        </span>
+        <figcaption>AI로 만든 장식 배경입니다. 실제 수납 결과가 아닙니다.</figcaption>
+      </figure>
+    )}
+    {posts.length === 0 ? (
+      <p class="empty-board">이 허브의 발행 글이 아직 없습니다.</p>
+    ) : (
+      <div class="cards">
+        {posts.map((post) => (
+          <Card
+            href={postPath(post.id)}
+            title={post.data.title}
+            excerpt={cardExcerpt(post.data.description)}
+            category={post.data.category}
+            image={`/thumb/posts/${post.id}/card.png`}
+            overlayTitle={post.data.thumbTitle || post.data.title}
+            overlaySub={post.data.thumbSubtitle || post.data.main_query}
+            date={formatDot(post.data.date)}
+          />
+        ))}
+      </div>
+    )}
+  </main>
+</Base>

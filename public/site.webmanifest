@@ -1,0 +1,14 @@
+{
+  "name": "꽃과살림노트",
+  "short_name": "꽃과살림노트",
+  "description": "꽃이 있는 집, 식물이 자라는 일상, 반려동물과 안전한 살림을 위한 실용 생활 노트.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FCFBF8",
+  "theme_color": "#416743",
+  "lang": "ko",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

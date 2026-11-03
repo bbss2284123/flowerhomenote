@@ -1,0 +1,35 @@
+---
+import Base from "../layouts/Base.astro";
+import { siteConfig } from "../../site.config";
+---
+<Base title="출처 기준" description="꽃과살림노트가 출처, 이미지 권리, 식물과 반려동물 안전, 세정제를 확인하는 기준입니다." path="/sources/">
+  <main id="content" class="wrap page-narrow" data-pagefind-body>
+    <h1>출처 기준</h1>
+    <p>최종 수정 {siteConfig.legalUpdated}. 발행 글은 출처와 확인일이 없으면 올라가지 않습니다.</p>
+    <h2>글</h2>
+    <ul>
+      <li>출처는 최소 한 곳이고, 주소는 https이며, 확인일(checked_at)을 적습니다.</li>
+      <li>본문과 제목의 숫자는 work/&lt;slug&gt;/facts.yaml 에 없는 값이면 검수에서 멈춥니다.</li>
+      <li>첫 제목 앞의 도입은 세 문장, 300자 이하입니다. 빠른 답 칸이 있어야 합니다.</li>
+      <li>위험도가 high인 글은 verified_by가 있어야 발행할 수 있습니다.</li>
+    </ul>
+    <h2>이미지</h2>
+    <ul>
+      <li>모든 이미지에 대체 텍스트와 source_type이 있습니다. original-photo, licensed, illustration, ai_generated 중 하나입니다. ai_generated 는 장식이며 실제 결과가 아닙니다.</li>
+      <li>직접 촬영이 아니면 license_proof를 적습니다.</li>
+      <li>브랜드 키트의 샘플 썸네일 여섯 장은 AI로 만든 예시입니다. 글의 사진으로 쓰지 않습니다.</li>
+      <li>농사로 사진과 공공누리 제4유형(출처 표시, 상업적 이용 금지, 변경 금지) 이미지는 복제하지 않습니다. 내용은 확인한 뒤 자체 문장으로 적습니다.</li>
+      <li>장식 이미지나 AI 이미지로 전후 비교를 말하지 않습니다. 전후는 직접 촬영만 허용합니다.</li>
+    </ul>
+    <h2>식물과 반려동물</h2>
+    <ul>
+      <li>독성, 유독, 중독이라고 쓰면 학명과 출처가 있어야 합니다. 일상 이름만으로 안전하다고 쓰지 않습니다.</li>
+      <li>아픈 동물에 대한 치료와 약은 이 사이트의 생활 정리로 대신하지 않습니다.</li>
+    </ul>
+    <h2>청소와 화학 물질</h2>
+    <ul>
+      <li>표백제(락스, 차아염소산나트륨)를 식초, 암모니아, 다른 세정제와 섞으라고 적으면 검수가 멈춥니다.</li>
+      <li>섞지 말라는 경고는 허용합니다. 제품 라벨과 환기를 먼저 적습니다.</li>
+    </ul>
+  </main>
+</Base>
