@@ -160,7 +160,7 @@ test("미래 날짜는 공개 전", () => {
 });
 
 test("하루 발행 상한과 빈 광고 값", () => {
-  assert.equal(siteConfig.maxPostsPerDay, 1);
+  assert.equal(siteConfig.maxPostsPerDay, 2);
   assert.equal(siteConfig.url, "https://flowerhomenote.com");
   assert.equal(siteConfig.adsense.publisherId, "");
   assert.equal(siteConfig.ga4Id, "");

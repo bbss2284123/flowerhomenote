@@ -36,7 +36,7 @@ npm run preview
 
 GitHub Actions `Scheduled publish` 가 30분마다 07:00–22:30 KST 에 돌아갑니다. 저장소 비밀 `CF_PAGES_DEPLOY_HOOK` 에 Cloudflare Pages 배포 훅 URL을 넣습니다. 비밀이 없으면 배포를 건너뛰고 성공으로 끝납니다.
 
-초안(`draft: true`)은 배포 대상이 아닙니다. `publishAt`(없으면 `date`)이 아직 오지 않은 글은 빌드에 나오지 않고, 그 시각이 지난 뒤의 예약 실행이 배포 훅을 호출합니다. 같은 한국 날짜에 공개되는 글은 `site.config.ts` 의 `maxPostsPerDay`(1)까지입니다.
+초안(`draft: true`)은 배포 대상이 아닙니다. `publishAt`(없으면 `date`)이 아직 오지 않은 글은 빌드에 나오지 않고, 그 시각이 지난 뒤의 예약 실행이 배포 훅을 호출합니다. 같은 한국 날짜에 공개되는 글은 `site.config.ts` 의 `maxPostsPerDay`(2)까지입니다.
 
 ## 주인님이 채울 값
 
