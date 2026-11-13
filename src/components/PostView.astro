@@ -47,7 +47,7 @@ const jsonLd = [
     author,
     publisher: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url, logo: absoluteUrl("/android-chrome-512x512.png") },
     mainEntityOfPage: url,
-    image: absoluteUrl(`/thumb/posts/${post.id}/og.png`),
+    image: absoluteUrl(`/thumb/posts/${post.id}/og.jpg`),
     inLanguage: "ko",
   },
   {
@@ -68,7 +68,7 @@ const reviewLabel = { draft: "초안", "needs-review": "검수 필요", approved
   title={post.data.title}
   description={post.data.description}
   path={post.data.draft ? `/draft/${post.id}/` : postPath(post.id)}
-  ogImage={`/thumb/posts/${post.id}/og.png`}
+  ogImage={`/thumb/posts/${post.id}/og.jpg`}
   type="article"
   published={post.data.date}
   modified={post.data.updated}
@@ -97,7 +97,7 @@ const reviewLabel = { draft: "초안", "needs-review": "검수 필요", approved
     </p>
     <figure class="hero-figure">
       <span class="card-media">
-        <img src={`/thumb/posts/${post.id}/card.png`} alt={hero?.alt ?? ""} width="1200" height="675" />
+        <img src={`/thumb/posts/${post.id}/card.webp`} alt={hero?.alt ?? ""} width="1200" height="675" />
         <span class="card-overlay" aria-hidden="true">
           <span class="thumb-chip">
             <img src={`/icons/${post.data.category}.svg`} alt="" width="18" height="18" />
@@ -174,7 +174,7 @@ const reviewLabel = { draft: "초안", "needs-review": "검수 필요", approved
               title={item.data.title}
               excerpt={cardExcerpt(item.data.description)}
               category={item.data.category}
-              image={`/thumb/posts/${item.id}/card.png`}
+              image={`/thumb/posts/${item.id}/card.webp`}
               overlayTitle={item.data.thumbTitle || item.data.title}
               overlaySub={item.data.thumbSubtitle || item.data.main_query}
               date={formatDot(item.data.date)}

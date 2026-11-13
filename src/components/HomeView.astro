@@ -64,14 +64,28 @@ const pills = [
         <h2>최근 올라온 글</h2>
         <a href="/archive/">전체 글 보기</a>
       </div>
-      {topicMode && (
-        <p class="section-note">발행된 글이 없습니다. 아래 카드는 편집자 추천 주제이며 글, 날짜, 조회수가 아닙니다.</p>
+      {topicMode ? (
+        <div class="topic-fallback">
+          <p class="section-note">아직 발행된 글이 없습니다. 아래는 준비 중인 주제로, 누르면 사이트 검색으로 이동합니다.</p>
+          <ul class="topic-list">
+            {siteConfig.homeTopics.map((topic) => (
+              <li>
+                <a href={`/search/?q=${encodeURIComponent(topic.q)}`}>
+                  <img src={`/icons/${topic.icon}.svg`} alt="" width="22" height="22" />
+                  <span>{topic.label}</span>
+                  <small>{topic.categoryLabel}</small>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <div class="cards">
+          {cards.map((card, index) => (
+            <Card {...card} eager={index < 6} />
+          ))}
+        </div>
       )}
-      <div class="cards">
-        {cards.map((card, index) => (
-          <Card {...card} eager={index < 6} />
-        ))}
-      </div>
       {devHints && (
         <p class="dev-note">
           개발 서버에서만 초안을 볼 수 있습니다.
@@ -115,3 +129,10 @@ const pills = [
     </div>
   </section>
 </main>
+
+<style>
+  .topic-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .topic-list a { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 10px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); text-decoration: none; }
+  .topic-list a:hover { border-color: var(--brand); }
+  .topic-list small { margin-left: auto; color: var(--muted); font-size: 0.9rem; }
+</style>

@@ -15,7 +15,7 @@ interface Props {
 const { title, description, canonical, ogImage, type = "website", published, modified, jsonLd = [], noindex = false } = Astro.props;
 const envGa = import.meta.env.PUBLIC_GA_ID?.trim();
 const ga4Id = envGa || siteConfig.ga4Id;
-const image = ogImage ? absoluteUrl(ogImage) : absoluteUrl("/brand/og-default.png");
+const image = ogImage ? absoluteUrl(ogImage) : absoluteUrl("/brand/og-default.jpg");
 const fullTitle = title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
 ---
 <title>{fullTitle}</title>

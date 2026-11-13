@@ -129,7 +129,7 @@ test("농사로 이미지와 AI 전후 비교를 막음", () => {
 
 test("Shot 대체 텍스트가 다르면 막음", () => {
   const image: PostImage = {
-    path: "/thumb/backgrounds/plants.png",
+    path: "/thumb/backgrounds/plants.webp",
     alt: "식물 키우기 분류의 장식 배경입니다",
     source_type: "illustration",
     license_proof: "장식",

@@ -118,6 +118,7 @@ export function knownPaths(posts: { id: string; data: PostFrontmatter }[]): Set<
     "/search",
     "/about",
     "/privacy",
+    "/terms",
     "/contact",
     "/sources",
     "/archive",

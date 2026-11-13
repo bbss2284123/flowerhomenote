@@ -71,8 +71,8 @@ export const siteConfig = {
     "꽃·꽃말, 식물 키우기, 가드닝·텃밭, 반려동물, 살림·청소를 검색한 문제부터 해결 순서까지 적는 생활 노트입니다.",
   lang: "ko",
   locale: "ko_KR",
-  /** TODO: 받는 메일함으로 바꾸세요. */
-  contactEmail: "contact@flowerhomenote.com",
+  /** 문의 메일 */
+  contactEmail: "baekhyun071500@gmail.com",
   legalUpdated: "2026-11-03",
   postsPerPage: 6,
   /** 한국 시간 기준 하루 발행 상한. 같은 날 이 편수를 넘기면 검수가 실패하고, 예약 공개도 넘긴 글을 올리지 않습니다. */

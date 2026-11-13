@@ -20,33 +20,33 @@ const full = { left: 0, top: 0, width: 1200, height: 675 };
  */
 const crops: Record<string, Crop[]> = {
   flowers: [
-    { file: "brand/samples/01_수국_예쁘게_키우는_법.png", left: 640, top: 0, width: 560, height: 675 },
-    { file: "brand/backgrounds/flowers-window.png", ...full },
+    { file: "brand/samples/01_수국_예쁘게_키우는_법.webp", left: 640, top: 0, width: 560, height: 675 },
+    { file: "brand/backgrounds/flowers-window.webp", ...full },
     { file: "brand/editorial.webp", left: 880, top: 0, width: 720, height: 500 },
   ],
   plants: [
-    { file: "brand/samples/02_몬스테라_잎이_노랗게_될_때.png", left: 640, top: 0, width: 560, height: 675 },
-    { file: "brand/samples/02_몬스테라_잎이_노랗게_될_때.png", left: 730, top: 0, width: 470, height: 420 },
-    { file: "brand/samples/02_몬스테라_잎이_노랗게_될_때.png", left: 700, top: 240, width: 500, height: 435 },
+    { file: "brand/samples/02_몬스테라_잎이_노랗게_될_때.webp", left: 640, top: 0, width: 560, height: 675 },
+    { file: "brand/samples/02_몬스테라_잎이_노랗게_될_때.webp", left: 730, top: 0, width: 470, height: 420 },
+    { file: "brand/samples/02_몬스테라_잎이_노랗게_될_때.webp", left: 700, top: 240, width: 500, height: 435 },
   ],
   gardening: [
-    { file: "brand/backgrounds/gardening-veranda.png", ...full },
-    { file: "brand/backgrounds/gardening-herbs.png", ...full },
-    { file: "brand/samples/04_베란다_허브_가꾸기_입문.png", left: 0, top: 310, width: 1200, height: 365 },
+    { file: "brand/backgrounds/gardening-veranda.webp", ...full },
+    { file: "brand/backgrounds/gardening-herbs.webp", ...full },
+    { file: "brand/samples/04_베란다_허브_가꾸기_입문.webp", left: 0, top: 310, width: 1200, height: 365 },
   ],
   pets: [
-    { file: "brand/backgrounds/pets-window.png", ...full },
-    { file: "brand/samples/03_고양이_털_관리_쉽게_하는_법.png", left: 700, top: 30, width: 500, height: 430 },
-    { file: "brand/samples/03_고양이_털_관리_쉽게_하는_법.png", left: 820, top: 160, width: 380, height: 515 },
+    { file: "brand/backgrounds/pets-window.webp", ...full },
+    { file: "brand/samples/03_고양이_털_관리_쉽게_하는_법.webp", left: 700, top: 30, width: 500, height: 430 },
+    { file: "brand/samples/03_고양이_털_관리_쉽게_하는_법.webp", left: 820, top: 160, width: 380, height: 515 },
   ],
   home: [
-    { file: "brand/backgrounds/home-bathroom.png", ...full },
-    { file: "brand/backgrounds/home-kitchen.png", ...full },
-    { file: "brand/backgrounds/home-living.png", ...full },
+    { file: "brand/backgrounds/home-bathroom.webp", ...full },
+    { file: "brand/backgrounds/home-kitchen.webp", ...full },
+    { file: "brand/backgrounds/home-living.webp", ...full },
   ],
   storage: [
-    { file: "brand/backgrounds/storage-shelves.png", ...full },
-    { file: "brand/backgrounds/storage-baskets.png", ...full },
+    { file: "brand/backgrounds/storage-shelves.webp", ...full },
+    { file: "brand/backgrounds/storage-baskets.webp", ...full },
   ],
 };
 
@@ -65,7 +65,7 @@ export function variantIndex(categoryId: string, key: string): number {
 }
 
 export function backgroundPath(categoryId: string, key: string): string {
-  return `/thumb/backgrounds/${categoryId}-${variantIndex(categoryId, key)}.png`;
+  return `/thumb/backgrounds/${categoryId}-${variantIndex(categoryId, key)}.webp`;
 }
 
 export async function renderBackground(categoryId: string, variant = 0): Promise<Buffer> {
@@ -79,7 +79,7 @@ export async function renderBackground(categoryId: string, variant = 0): Promise
     .resize(1200, 675, { fit: "cover", position: "attention" })
     .modulate({ saturation: 1.08, brightness: 1.02 })
     .sharpen({ sigma: 0.4 })
-    .png()
+    .webp({ quality: 80, effort: 5 })
     .toBuffer();
 }
 
@@ -101,11 +101,11 @@ export async function renderCard(input: { categoryId: string; title?: string; su
   if (input.background) {
     const file = path.join(process.cwd(), "public", input.background.replace(/^\/+/, ""));
     if (!existsSync(file)) throw new Error(`배경 파일이 없습니다: ${input.background}`);
-    return sharp(file).resize(1200, 675, { fit: "cover" }).png().toBuffer();
+    return sharp(file).resize(1200, 675, { fit: "cover" }).webp({ quality: 80, effort: 5 }).toBuffer();
   }
   return renderBackground(input.categoryId, 0);
 }
 
 export async function renderOg(card: Buffer): Promise<Buffer> {
-  return sharp(card).resize(1200, 630, { fit: "cover", position: "attention" }).png().toBuffer();
+  return sharp(card).resize(1200, 630, { fit: "cover", position: "attention" }).jpeg({ quality: 82, mozjpeg: true }).toBuffer();
 }

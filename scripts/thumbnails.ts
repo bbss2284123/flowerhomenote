@@ -9,8 +9,8 @@ async function writeSet(dir: string, id: string) {
   const count = variantCount(id);
   for (let variant = 0; variant < count; variant += 1) {
     const png = await renderBackground(id, variant);
-    writeFileSync(path.join(dir, `${id}-${variant}.png`), png);
-    if (variant === 0) writeFileSync(path.join(dir, `${id}.png`), png);
+    writeFileSync(path.join(dir, `${id}-${variant}.webp`), png);
+    if (variant === 0) writeFileSync(path.join(dir, `${id}.webp`), png);
   }
   console.log(`배경 ${id} ${count}장`);
 }
@@ -65,8 +65,8 @@ async function main() {
     const og = await renderOg(card);
     const dir = path.join(outRoot, id);
     mkdirSync(dir, { recursive: true });
-    writeFileSync(path.join(dir, "card.png"), card);
-    writeFileSync(path.join(dir, "og.png"), og);
+    writeFileSync(path.join(dir, "card.webp"), card);
+    writeFileSync(path.join(dir, "og.jpg"), og);
     console.log(`썸네일 ${id}`);
   }
 }

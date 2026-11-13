@@ -4,7 +4,7 @@ import { allPublished, postPath } from "../lib/posts";
 
 export async function GET(_context: APIContext) {
   const posts = await allPublished();
-  const staticPages = ["/", "/about/", "/sources/", "/privacy/", "/contact/", "/search/", "/archive/", "/flowers-plants/"];
+  const staticPages = ["/", "/about/", "/sources/", "/privacy/", "/terms/", "/contact/", "/search/", "/archive/", "/flowers-plants/"];
   const urls = [
     ...staticPages.map((path) => ({ loc: absoluteUrl(path), lastmod: siteConfig.legalUpdated })),
     ...siteConfig.categories.map((category) => ({ loc: absoluteUrl(`/category/${category.id}/`), lastmod: siteConfig.legalUpdated })),
