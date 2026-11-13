@@ -1,0 +1,43 @@
+facts:
+  - id: F1
+    value: "야간온도 11℃ 이하: 꽃눈분화 억제, 휴면 유기"
+    source: "https://www.nongsaro.go.kr/portal/ps/psb/psbl/workScheduleDtl.ps?cntntsNo=30680&menuId=PS00087&sKidofcomdtySeCode=210003&totalSearchYn=Y"
+    checkedAt: "2026-11-13"
+    note: "농촌진흥청 농사로 수국 농작업일정. 야간온도 11~18℃는 꽃눈분화 원활."
+  - id: F2
+    value: "꽃눈 유도를 위해 질소 수준을 낮게 유지, 9월에는 1/2 수준, 10월에는 비료 주기 중단"
+    source: "https://www.nongsaro.go.kr/portal/ps/psb/psbl/workScheduleDtl.ps?cntntsNo=30680&menuId=PS00087&sKidofcomdtySeCode=210003&totalSearchYn=Y"
+    checkedAt: "2026-11-13"
+  - id: F3
+    value: "저온처리 시 상대습도 20~60% 범위 유지"
+    source: "https://www.nongsaro.go.kr/portal/ps/psb/psbl/workScheduleDtl.ps?cntntsNo=30680&menuId=PS00087&sKidofcomdtySeCode=210003&totalSearchYn=Y"
+    checkedAt: "2026-11-13"
+  - id: F4
+    value: "꽃눈분화 완료 후 휴면, 휴면타파에 4℃-7℃ 내외에서 6주 이상 저온 필요. 습도 20% 미만에서 꽃눈이 말라 죽고 60% 이상에서 부패하기 쉬움"
+    source: "https://doi.org/10.29335/tals.2020.58.19"
+    checkedAt: "2026-11-13"
+    note: "국내 학술지 논문(수국 꽃눈분화 발달과 환경 조절에 의한 개화기 조절), 선행 연구 인용 부분"
+  - id: F5
+    value: "휴면에 들어간 큰잎수국은 화씨 0도(섭씨 약 영하 18도, -17.8℃)까지 견딤. 휴면 전과 휴면이 깨진 뒤에는 영상(화씨 32도, 섭씨 0도 위)에서만 견딤. 바람에 의한 건조가 피해를 키움"
+    source: "https://ask.extension.org/kb/faq.php?id=818970"
+    checkedAt: "2026-11-13"
+  - id: F6
+    value: "봄 기온이 화씨 약 50도(섭씨 약 10도)로 오르면 새 생장이 시작되고, 덮개를 계속 두면 병원균과 해충을 부를 수 있음. 첫 땅 얼기 전까지 물을 충분히, 늦가을 멀칭"
+    source: "https://ask.extension.org/kb/faq.php?id=818970"
+    checkedAt: "2026-11-13"
+  - id: F7
+    value: "큰잎수국 마른 꽃은 겨울 동안 남겨 아래 눈을 서리에서 보호하고, 이른 봄 마른 꽃 아래 첫 튼튼한 눈 한 쌍까지 자름. 오래된 줄기 1~2개를 밑동에서 잘라 새 줄기를 유도"
+    source: "https://www.rhs.org.uk/plants/hydrangea/pruning-guide"
+    checkedAt: "2026-11-13"
+  - id: F8
+    value: "수국은 개, 고양이, 말에 유독. 독성 성분 시안배당체(cyanogenic glycoside). 증상 구토, 기력 저하, 설사"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/hydrangea"
+    checkedAt: "2026-11-13"
+  - id: F9
+    value: "큰잎수국의 눈은 줄기보다 내한성이 약간 낮음"
+    source: "https://doi.org/10.21273/hortsci.46.8.1121"
+    checkedAt: "2026-11-13"
+  - id: F10
+    value: "자료 확인일 2026-11-13, 이미지 제작일 2026-11-13"
+    source: "https://flowerhomenote.com/sources/"
+    checkedAt: "2026-11-13"

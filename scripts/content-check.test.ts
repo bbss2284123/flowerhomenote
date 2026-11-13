@@ -172,8 +172,9 @@ test("하루 발행 상한과 빈 광고 값", () => {
 
 test("현재 글은 검수를 통과", () => {
   const posts = loadPosts();
-  assert.equal(posts.length, 4);
-  assert.ok(posts.every((post) => post.data.draft));
+  // 레이아웃 초안 4편은 계속 draft로 둡니다. 나머지는 검수를 통과한 발행 글입니다.
+  assert.equal(posts.filter((post) => post.data.draft).length, 4);
+  assert.ok(posts.filter((post) => !post.data.draft).every((post) => post.data.review_status === "published" || post.data.review_status === "approved"));
   const errors = checkPosts(posts).filter((issue) => issue.level === "error");
   assert.deepEqual(errors, []);
 });
