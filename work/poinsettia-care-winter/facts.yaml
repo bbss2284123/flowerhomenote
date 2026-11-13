@@ -1,0 +1,30 @@
+facts:
+  - id: F1
+    value: "포인세티아 생육적온 21~25℃, 겨울최저온도 13℃ 이상"
+    source: "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=13214&menuId=PS00376&totalSearchYn=Y"
+    checkedAt: "2026-11-14"
+    note: "농촌진흥청 농사로 실내정원용 식물 포인세티아 관리정보"
+  - id: F2
+    value: "습도 40~70%, 광요구도 높은 광도, 배치장소 거실 창측·발코니 내측·발코니 창측"
+    source: "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=13214&menuId=PS00376&totalSearchYn=Y"
+    checkedAt: "2026-11-14"
+  - id: F3
+    value: "물주기 봄·여름·가을 흙을 촉촉하게 유지(물에 잠기지 않도록), 겨울 토양 표면이 말랐을 때 충분히 관수"
+    source: "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=13214&menuId=PS00376&totalSearchYn=Y"
+    checkedAt: "2026-11-14"
+  - id: F4
+    value: "추위에 약해 온도가 낮으면 잎이 떨어짐. 흰색 즙액은 피부나 눈에 염증을 일으킬 수 있음. 병충해 응애·깍지벌레·온실가루이"
+    source: "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=13214&menuId=PS00376&totalSearchYn=Y"
+    checkedAt: "2026-11-14"
+  - id: F5
+    value: "촉성재배 단일처리: 개화 기대일로부터 8~10주 전부터 1일 14시간 이상 암막처리. 자연재배 출하기 11월 중순~12월 중순"
+    source: "https://www.nongsaro.go.kr/portal/ps/psb/psbl/workScheduleDtl.ps?cntntsNo=30695&menuId=PS00087&sKidofcomdtySeCode=FL"
+    checkedAt: "2026-11-14"
+  - id: F6
+    value: "실제 꽃인 배상화서는 낮은 광도, 고온, 수분 스트레스에서 성숙 전에 조기 탈락"
+    source: "https://www.nongsaro.go.kr/portal/ps/psb/psbl/workScheduleDtl.ps?cntntsNo=30695&menuId=PS00087&sKidofcomdtySeCode=FL"
+    checkedAt: "2026-11-14"
+  - id: F7
+    value: "포인세티아는 개·고양이·말에 독성, 자극성 수액, 입과 위를 자극하고 가끔 구토, 독성은 대체로 과장된 편"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/poinsettia"
+    checkedAt: "2026-11-14"
