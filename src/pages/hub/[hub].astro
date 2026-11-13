@@ -23,7 +23,7 @@ const jsonLd = {
   url: absoluteUrl(`/hub/${hub}/`),
 };
 ---
-<Base title={meta?.name ?? "허브"} description={meta?.description ?? siteConfig.description} path={`/hub/${hub}/`} current={hub} jsonLd={[jsonLd]}>
+<Base title={meta?.name ?? "허브"} description={meta?.seoDescription ?? meta?.description ?? siteConfig.description} robots={posts.length === 0 ? "noindex, follow" : undefined} path={`/hub/${hub}/`} current={hub} jsonLd={[jsonLd]}>
   <main id="content" class="wrap page" data-pagefind-body>
     <header class="page-head">
       <div class="icon-title">
@@ -38,9 +38,8 @@ const jsonLd = {
     {hub === "storage" && (
       <figure class="hero-figure">
         <span class="card-media">
-          <img src="/thumb/backgrounds/storage-0.webp" alt="정리된 선반을 떠올리게 하는 AI 장식 배경. 실제 집 사진이 아닙니다." width="1200" height="675" />
+          <img src="/thumb/backgrounds/storage-0.webp" alt="바구니와 수납함이 가지런히 놓인 밝은 선반" width="1200" height="675" />
         </span>
-        <figcaption>AI로 만든 장식 배경입니다. 실제 수납 결과가 아닙니다.</figcaption>
       </figure>
     )}
     {posts.length === 0 ? (

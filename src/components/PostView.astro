@@ -153,17 +153,6 @@ const reviewLabel = { draft: "초안", "needs-review": "검수 필요", approved
         ))}
       </ul>
     </section>
-    <section class="image-log">
-      <h2>이미지 기록</h2>
-      <ul>
-        {post.data.images.map((image) => (
-          <li>
-            {image.alt} · {image.source_type}
-            {image.license_proof ? ` · ${image.license_proof}` : ""}
-          </li>
-        ))}
-      </ul>
-    </section>
     <section class="related">
       <h2>관련 글</h2>
       {related.length === 0 ? <p>같은 주제의 발행 글이 아직 없습니다.</p> : (

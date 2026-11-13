@@ -9,7 +9,7 @@ const posts = (await allPublished()).filter((post) => post.data.category === "fl
 const flowers = categoryById("flowers");
 const plants = categoryById("plants");
 ---
-<Base title="꽃·식물" description="꽃·꽃말과 식물 키우기를 함께 보는 페이지입니다." path="/flowers-plants/" current="flowers-plants">
+<Base title="꽃·식물" description="꽃·꽃말과 식물 키우기 글을 한곳에 모았어요. 절화와 꽃다발 관리, 계절 꽃, 실내식물 물주기와 잎 변색, 분갈이까지 출처와 함께 정리해 두었어요." robots={posts.length === 0 ? "noindex, follow" : undefined} path="/flowers-plants/" current="flowers-plants">
   <main id="content" class="wrap page" data-pagefind-body>
     <header class="page-head">
       <p class="kicker">꽃 · 식물</p>

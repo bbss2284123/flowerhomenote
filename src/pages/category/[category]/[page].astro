@@ -25,7 +25,7 @@ const start = (current - 1) * siteConfig.postsPerPage;
 const visible = posts.slice(start, start + siteConfig.postsPerPage);
 const pages = Math.ceil(posts.length / siteConfig.postsPerPage);
 ---
-<Base title={`${meta?.name ?? "분류"} ${current}`} description={meta?.description ?? siteConfig.description} path={`/category/${category}/${current}/`} current={category}>
+<Base title={`${meta?.name ?? "분류"} ${current}`} description={meta?.seoDescription ?? meta?.description ?? siteConfig.description} path={`/category/${category}/${current}/`} current={category}>
   <main id="content" class="wrap page" data-pagefind-body>
     <header class="page-head">
       <h1>{meta?.name}</h1>

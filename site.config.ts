@@ -25,6 +25,8 @@ export interface Category {
   /** 장식용. 작은 본문 글자에는 쓰지 않습니다. */
   pill: string;
   topics: CategoryTopic[];
+  /** 목록 페이지 메타 설명(60~100자) */
+  seoDescription?: string;
 }
 
 export interface Hub {
@@ -34,6 +36,8 @@ export interface Hub {
   /** 상위 분류가 아닌 필터이면 true */
   filter: boolean;
   icon: string;
+  /** 목록 페이지 메타 설명(60~100자) */
+  seoDescription?: string;
 }
 
 export interface NavItem {
@@ -107,6 +111,7 @@ export const siteConfig = {
     {
       id: "flowers",
       name: "꽃·꽃말",
+      seoDescription: "꽃 종류와 계절 꽃, 꽃다발·절화 물갈이, 화병 관리, 꽃말의 출처까지 꽃을 오래 예쁘게 즐기는 방법을 출처와 확인일을 붙여 정리해요.",
       description: "꽃 종류, 계절 꽃, 절화와 꽃다발, 화병 관리, 꽃말의 출처를 다룹니다.",
       tile: "#F8E8E4",
       accent: "#8C4E4A",
@@ -122,6 +127,7 @@ export const siteConfig = {
     {
       id: "plants",
       name: "식물 키우기",
+      seoDescription: "실내식물과 화분 식물의 햇빛·물주기·온도, 잎이 노랗게 변할 때, 병충해와 분갈이까지 증상부터 점검 순서대로 차근차근 정리해요.",
       description: "식물별 햇빛·물·온도, 잎 변색, 병충해, 분갈이를 증상부터 점검 순서로 정리합니다.",
       tile: "#EAF1E7",
       accent: "#416743",
@@ -137,6 +143,7 @@ export const siteConfig = {
     {
       id: "gardening",
       name: "가드닝·텃밭",
+      seoDescription: "베란다 화분과 텃밭, 허브·채소 기르기, 계절별 가드닝 작업과 초보 도구까지 집에서 시작하는 가드닝을 출처와 함께 정리해요.",
       description: "베란다 화분, 허브와 채소, 계절 작업, 초보 도구를 다룹니다.",
       tile: "#E7F0E2",
       accent: "#3E6A45",
@@ -152,6 +159,7 @@ export const siteConfig = {
     {
       id: "pets",
       name: "반려동물",
+      seoDescription: "강아지·고양이 털과 발 관리, 반려동물과 함께 키우기 안전한 식물, 침구 세탁까지 함께 사는 집의 생활 관리를 출처와 함께 정리해요.",
       description: "강아지·고양이 생활 관리, 털과 발, 식물과 함께 사는 집을 다룹니다. 질병 치료는 검증과 동물병원 상담이 먼저입니다.",
       tile: "#F8F1E6",
       accent: "#8A6232",
@@ -167,6 +175,7 @@ export const siteConfig = {
     {
       id: "home",
       name: "살림·청소",
+      seoDescription: "주방·욕실 청소, 곰팡이와 냄새, 세탁, 정리·수납, 계절별 집 관리까지 살림 고민을 장소와 오염별 해결 순서로 정리해요.",
       description: "주방, 욕실, 세탁, 냄새, 곰팡이, 정리·수납, 계절별 집 관리를 다룹니다.",
       tile: "#E7F2EA",
       accent: "#2F6A4A",
@@ -184,6 +193,7 @@ export const siteConfig = {
     {
       id: "month",
       name: "이번 달 필요한 관리",
+      seoDescription: "이번 달 실내식물과 베란다, 집 안에서 먼저 챙길 관리를 모았어요. 계절이 바뀔 때 놓치기 쉬운 일을 출처와 함께 확인해 보세요.",
       description: "이번 달에 실내 식물과 집에서 먼저 볼 일을 모읍니다.",
       filter: false,
       icon: "gardening",
@@ -191,6 +201,7 @@ export const siteConfig = {
     {
       id: "beginner",
       name: "초보자 가이드",
+      seoDescription: "화분, 꽃, 청소, 반려동물 생활을 처음 시작할 때 읽기 좋은 초보자 가이드를 모았어요. 기본 순서부터 차근차근 따라 해 보세요.",
       description: "화분, 꽃, 청소, 반려동물을 처음 시작할 때 여는 글입니다.",
       filter: false,
       icon: "flowers",
@@ -198,6 +209,7 @@ export const siteConfig = {
     {
       id: "problems",
       name: "자주 겪는 문제",
+      seoDescription: "잎 변색, 곰팡이, 냄새, 반려동물 털처럼 자주 반복되는 집안 문제를 모았어요. 증상별 원인과 해결 순서를 출처와 함께 확인해 보세요.",
       description: "잎 변색, 곰팡이, 냄새, 털처럼 반복되는 문제를 모읍니다.",
       filter: false,
       icon: "home",
@@ -205,6 +217,7 @@ export const siteConfig = {
     {
       id: "with-pets",
       name: "반려동물과 함께하는 집",
+      seoDescription: "반려동물과 함께 사는 집에서 식물과 살림을 안전하게 챙기는 글을 모았어요. 학명과 출처를 확인한 정보만 차분히 정리해요.",
       description: "반려동물이 있는 집에서 식물과 살림을 함께 볼 때 여는 글입니다.",
       filter: false,
       icon: "pets",
@@ -212,6 +225,7 @@ export const siteConfig = {
     {
       id: "season",
       name: "계절별 추천",
+      seoDescription: "계절이 바뀔 때 실내식물, 베란다 화분, 정원과 집 안에서 챙길 관리를 모았어요. 겨울나기와 봄맞이 준비를 시기별로 확인해 보세요.",
       description: "계절이 바뀔 때 실내와 베란다에서 볼 관리를 모읍니다.",
       filter: false,
       icon: "gardening",
@@ -219,6 +233,7 @@ export const siteConfig = {
     {
       id: "storage",
       name: "정리·수납",
+      seoDescription: "살림·청소 안의 정리와 수납 글을 모았어요. 선반, 바구니, 옷장과 주방 수납까지 좁은 집도 깔끔하게 쓰는 방법을 정리해요.",
       description: "살림·청소 안의 정리와 수납입니다. 여섯 번째 상위 분류가 아닙니다.",
       filter: true,
       icon: "storage",

@@ -26,7 +26,7 @@ const jsonLd = {
   url: absoluteUrl(`/category/${category}/`),
 };
 ---
-<Base title={meta?.name ?? "분류"} description={meta?.description ?? siteConfig.description} path={`/category/${category}/`} current={category} jsonLd={[jsonLd]}>
+<Base title={meta?.name ?? "분류"} description={meta?.seoDescription ?? meta?.description ?? siteConfig.description} robots={posts.length === 0 ? "noindex, follow" : undefined} path={`/category/${category}/`} current={category} jsonLd={[jsonLd]}>
   <main id="content" class="wrap page" data-pagefind-body>
     <header class="page-head">
       <div class="icon-title">

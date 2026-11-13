@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import { siteConfig } from "../../site.config";
 ---
-<Base title="검색" description={`${siteConfig.name} 글 검색`} path="/search/" current="search">
+<Base title="검색" description="꽃과살림노트의 글 제목과 본문에서 꽃·식물, 가드닝, 반려동물, 살림·청소 관리법을 찾아보세요. 궁금한 증상이나 식물 이름으로 검색할 수 있어요." path="/search/" current="search" robots="noindex, follow">
   <main id="content" class="wrap search-page" data-pagefind-body>
     <h1>검색</h1>
     <p>제목과 본문에서 찾습니다. 발행된 글과 안내 페이지만 색인에 들어갑니다.</p>

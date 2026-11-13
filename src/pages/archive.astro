@@ -7,7 +7,7 @@ import { formatDot } from "../lib/dates";
 
 const posts = await allPublished();
 ---
-<Base title="전체 글" description={`${siteConfig.name}에 발행된 글`} path="/archive/">
+<Base title="전체 글" description="꽃과살림노트에 발행된 모든 글을 최신순으로 모았어요. 꽃·식물, 가드닝, 반려동물, 살림·청소 관리법을 출처와 확인일과 함께 확인해 보세요." robots={posts.length === 0 ? "noindex, follow" : undefined} path="/archive/">
   <main id="content" class="wrap page" data-pagefind-body>
     <header class="page-head">
       <h1>전체 글</h1>
