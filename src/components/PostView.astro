@@ -12,7 +12,7 @@ import Term from "./mdx/Term.astro";
 import { categoryById, siteConfig, absoluteUrl } from "../../site.config";
 import { templateNames } from "../lib/post-schema";
 import { authorName, cardExcerpt, postPath } from "../lib/posts";
-import { formatDot, formatKo } from "../lib/dates";
+import { formatDot } from "../lib/dates";
 import { headingSlug } from "../lib/slug";
 
 interface Props {
@@ -61,8 +61,6 @@ const jsonLd = [
   },
 ];
 const hero = post.data.images.find((image) => image.path === post.data.heroImage) ?? post.data.images[0];
-const riskLabel = { low: "낮음", medium: "보통", high: "높음" }[post.data.risk_level];
-const reviewLabel = { draft: "초안", "needs-review": "검수 필요", approved: "승인", published: "발행" }[post.data.review_status];
 ---
 <Base
   title={post.data.title}
@@ -88,13 +86,6 @@ const reviewLabel = { draft: "초안", "needs-review": "검수 필요", approved
       {post.data.draft && <span class="draft-flag">초안 · 발행되지 않음 · 검증된 관리법이 아닙니다</span>}
     </div>
     <h1>{post.data.title}</h1>
-    <p class="meta-line">
-      {formatKo(post.data.date)}
-      · 수정 {formatDot(post.data.updated)}
-      · {authorName(post)}
-      · 위험도 {riskLabel}
-      · {reviewLabel}
-    </p>
     <figure class="hero-figure">
       <span class="card-media">
         <img src={`/thumb/posts/${post.id}/card.webp`} alt={hero?.alt ?? ""} width="1200" height="675" />
