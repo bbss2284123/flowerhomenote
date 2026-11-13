@@ -293,6 +293,8 @@ export const siteConfig = {
     google: "",
     /** 네이버 서치어드바이저 */
     naver: "34efb706d4fe9f1c1026f2148183ed9428533795",
+    /** 네이버 서치어드바이저 (추가 인증) */
+    naverAdditional: "ef8fec6b57539abe26b79b8a04c6616aa31ae696",
     /** Bing 웹마스터 */
     bing: "4295E7324F92E663BAC5DF1CD96A3E7D",
   },
