@@ -128,7 +128,7 @@ const reviewLabel = { draft: "초안", "needs-review": "검수 필요", approved
     {post.data.risk_level === "high" && (
       <aside class="callout callout-danger">
         <strong>확인이 필요한 글</strong>
-        <p>확인한 사람: {post.data.verified_by}. 확인일: {post.data.verified_at ?? "없음"}.</p>
+        <p>전문가 확인이 필요한 내용이에요. 상태가 걱정되면 전문가와 먼저 상담해 주세요.</p>
       </aside>
     )}
     {toc.length > 0 && (
@@ -142,17 +142,6 @@ const reviewLabel = { draft: "초안", "needs-review": "검수 필요", approved
     <div class="prose">
       <Content components={{ Shot, Marker, Arrow, HighlightBox, Callout, AdSlot, Term }} />
     </div>
-    <section class="sources">
-      <h2>출처와 확인일</h2>
-      <ul>
-        {post.data.sources.map((source) => (
-          <li>
-            <a href={source.url} rel="noopener noreferrer">{source.title}</a>
-            <span> · 확인 {source.checked_at}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
     <section class="related">
       <h2>관련 글</h2>
       {related.length === 0 ? <p>같은 주제의 발행 글이 아직 없습니다.</p> : (

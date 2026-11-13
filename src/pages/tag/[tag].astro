@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
-<Base title={`#${tag}`} description={`‘${tag}’ 주제로 꽃과살림노트에 발행된 글을 모았어요. 꽃과 식물, 살림 관리법을 출처와 확인일을 붙여 차근차근 정리해 두었어요.`} path={`/tag/${tag}/`}>
+<Base title={`#${tag}`} description={`‘${tag}’ 주제로 꽃과살림노트에 발행된 글을 모았어요. 꽃과 식물, 살림 관리법을 믿을 만한 자료를 바탕으로 차근차근 정리해 두었어요.`} path={`/tag/${tag}/`}>
   <main id="content" class="wrap page" data-pagefind-body>
     <header class="page-head">
       <h1>#{tag}</h1>
