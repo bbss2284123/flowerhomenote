@@ -1,0 +1,27 @@
+facts:
+  - id: F1
+    value: "일반 곰팡이 제거: 시판 곰팡이 제거 제품 사용 또는 물 약 3.8리터에 표백제 1컵 이하. 암모니아가 첨가된 표백제는 유독가스 위험으로 사용 금지"
+    source: "https://www.ehtis.or.kr/cmn/sym/mnu/mpm/111021211/htmlCnView.do"
+    checkedAt: "2026-11-14"
+    note: "환경보건포털 실내공기_곰팡이, 출처 환경부 「생활 속 곰팡이 이렇게 관리하세요」"
+  - id: F2
+    value: "실리콘 이음새 곰팡이는 락스나 곰팡이 제거제를 분무기로 뿌린 뒤 하루 동안 티슈를 붙여 두었다 떼어 제거"
+    source: "https://www.ehtis.or.kr/cmn/sym/mnu/mpm/111021211/htmlCnView.do"
+    checkedAt: "2026-11-14"
+  - id: F3
+    value: "곰팡이 청소 시 마스크 착용 권장. 곰팡이 제거 후 벽·배관 누수 확인·수리, 온도 차로 창문 습기 생기지 않게 예방, 제습제·건조기·에어컨으로 항온·항습, 먼지 정기 청소"
+    source: "https://www.ehtis.or.kr/cmn/sym/mnu/mpm/111021211/htmlCnView.do"
+    checkedAt: "2026-11-14"
+  - id: F4
+    value: "곰팡이는 높은 습도·수분·적절한 온도·약간의 영양분으로 어떤 표면에서도 자람. 장기 노출 시 천식·알레르기 비염 등 유발·악화, 어린이·노인·임산부 등 더 취약"
+    source: "https://www.ehtis.or.kr/cmn/sym/mnu/mpm/111021211/htmlCnView.do"
+    checkedAt: "2026-11-14"
+  - id: F5
+    value: "자연환기는 맞통풍으로 하루 3회 이상, 1회 30분 이상, 기상 후·오후·취침 전 8시간 주기. 기계환기는 하루 3번 이상 1회 2시간 이상 또는 연속"
+    source: "https://www.korea.kr/news/policyNewsView.do?newsId=148909591"
+    checkedAt: "2026-11-14"
+    note: "정책브리핑 2022-12-20, 자료제공 국립환경과학원"
+  - id: F6
+    value: "쾌적한 습도 40~60%. 결로는 습도 높고 차가운 창·벽·바닥·천장에서 잘 생기며 창문틀 점검. 주기적 환기·제습기로 습도 낮게. 심하면 전문가 자문 받아 단열 시공, 미생물 번식 시 오염자재 제거 후 결로 방지대책"
+    source: "https://www.korea.kr/news/policyNewsView.do?newsId=148909591"
+    checkedAt: "2026-11-14"
