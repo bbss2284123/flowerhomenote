@@ -1,0 +1,25 @@
+facts:
+  - id: F1
+    value: "한국소비자원 롱패딩 10개 시험에서 기계세탁 표시 4개, 손세탁 표시 6개로 제품마다 세탁 표시가 다름"
+    source: "https://www.kca.go.kr/smartconsumer/sub.do?menukey=7714&mode=view&no=1002872348"
+    checkedAt: "2026-11-15"
+  - id: F2
+    value: "세탁 시 취급 주의 표시에 따라 지퍼를 모두 잠근 상태에서 뒤집어 세탁, 드라이와 물세탁 모두 가능한 제품도 우모 유지분 손실 가능성이 적은 물세탁이 좋음"
+    source: "https://www.kca.go.kr/smartconsumer/sub.do?menukey=7714&mode=view&no=1002872348"
+    checkedAt: "2026-11-15"
+  - id: F3
+    value: "세탁 후 뭉친 우모를 가볍게 두드려 펴기, 그늘에서 완전히 건조한 뒤 통풍이 잘 되는 곳에 눌리지 않도록 보관"
+    source: "https://www.kca.go.kr/smartconsumer/sub.do?menukey=7714&mode=view&no=1002872348"
+    checkedAt: "2026-11-15"
+  - id: F4
+    value: "품질표시는 코트 옆구리 봉제선 등에 있음, 물통 물결무늬는 손세탁 가능, X는 금지, 동그라미는 드라이클리닝, 세탁비누·가루비누 대부분 약알칼리성이라 세제 종류 확인, 드라이 표시 옷을 임의 물세탁해 생긴 사고는 소비자취급부주의로 보상 불가"
+    source: "https://www.kca.go.kr/home/sub.do?menukey=4009&mode=view&no=1000647058"
+    checkedAt: "2026-11-15"
+  - id: F5
+    value: "드라이클리닝은 충전재 천연 기름을 분리해 보온성 저하, 미지근한 물에 중성세제 손세탁, 세탁기는 세탁망에 넣어 울코스·약한 세탁과 탈수"
+    source: "https://www.hanam.go.kr/cleanh/cleanhBbsNttWebView.do?key=4348&nttNo=928"
+    checkedAt: "2026-11-15"
+  - id: F6
+    value: "그늘에 눕혀 말린 뒤 빈 페트병이나 수건 만 옷걸이로 두드리면 공기층 회복, 옷걸이에 걸면 충전재가 쏠려 접어서 보관, 롱패딩은 신문지를 사이에 넣어 접어 통풍되는 곳에 보관"
+    source: "https://www.hanam.go.kr/cleanh/cleanhBbsNttWebView.do?key=4348&nttNo=928"
+    checkedAt: "2026-11-15"
