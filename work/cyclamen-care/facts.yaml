@@ -1,0 +1,29 @@
+facts:
+  - id: F1
+    value: "시클라멘 생육적온 16~20℃, 겨울최저온도 7℃, 습도 40~70%, 물주기 봄·가을·겨울 토양 표면이 말랐을 때 충분히 관수, 배치 거실 창측·발코니 내측·발코니 창측, 관리수준 전문가, 병충해 진딧물·응애·온실가루이"
+    source: "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=19707&menuId=PS00376&totalSearchYn=Y"
+    checkedAt: "2026-11-16"
+  - id: F2
+    value: "덩이줄기 구근식물 시클라멘 꽃은 11월~3월까지 피고 한 줄기 끝에 1개의 꽃, 통풍 잘 되는 서늘한 곳 선호, 잎과 구근에 물이 닿지 않도록 저면관수"
+    source: "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=19707&menuId=PS00376&totalSearchYn=Y"
+    checkedAt: "2026-11-16"
+  - id: F3
+    value: "저면관수는 화분 높이의 1/4~3/4이 잠기게 물을 채우고 10~30분 두기"
+    source: "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentMain.ps?menuId=PS04108"
+    checkedAt: "2026-11-16"
+  - id: F4
+    value: "낮 60~65°F(약 15~18℃), 밤 50°F(약 10℃), 70°F(약 21℃) 넘으면 꽃봉오리 발달 못함, 난방 통풍구 피하기, 물 준 뒤 받침 물 고이면 뿌리 썩음, 시든 꽃대는 밑동에서 완전히 잡아 빼기, 꽃 진 뒤 휴면에 잎 노래짐, 집 안은 빛 부족으로 재개화 어려움"
+    source: "https://hgic.clemson.edu/factsheet/cyclamen/"
+    checkedAt: "2026-11-16"
+  - id: F5
+    value: "시든 꽃대는 비틀어 당겨 밑동에서 제거, 너무 젖거나 마르면 잎이 노래짐, 덥고 건조하거나 빛 부족도 원인, 잎이 말랑하면 물 필요, 저질소 비료 2주에 한 번, 휴면 2~3개월, 휴면 후 알뿌리 윗부분이 흙 위로 나오게 분갈이"
+    source: "https://hort.extension.wisc.edu/articles/cyclamen/"
+    checkedAt: "2026-11-16"
+  - id: F6
+    value: "시클라멘은 개·고양이에 독성, 침 흘림·구토·설사, 알뿌리를 많이 먹으면 심장 이상·발작"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/cyclamen"
+    checkedAt: "2026-11-16"
+  - id: F7
+    value: "시클라멘 꽃말 수줍음, 질투, 의심"
+    source: "https://www.kyeonggi.com/article/20241013580275"
+    checkedAt: "2026-11-16"
