@@ -1,0 +1,29 @@
+facts:
+  - id: F1
+    value: "홀리데이 선인장은 열대우림 원산, 높은 습도·밝지만 걸러진 빛·한 해 대부분 비교적 촉촉한 흙 필요, 배수 중요, 뿌리 썩음이 흔한 사망 원인; 물 사이 흙 말리기, 싱크대에서 물 빼기, 받침·겉화분 물 버리기(남은 물은 봉오리 떨어짐·시듦·뿌리 썩음); 꽃 진 뒤 물 줄였다가 봄·초여름 다시 늘리기"
+    source: "https://extension.umn.edu/houseplants/holiday-cacti"
+    checkedAt: "2026-11-20"
+  - id: F2
+    value: "실내 낮 65~70°F 밤 55~65°F, 밤 55°F면 5~6주 뒤 개화, 밤 60~65°F면 약 6주 매일 12시간 이상 완전한 어둠, 밤 65°F 초과 시 개화 어려움, 과한 햇빛은 줄기 연녹색·건조·탐; 봉오리 생긴 뒤 건드리기 싫어함, 찬바람·급격한 온습도 변화·햇빛 방향과 양 변화로 봉오리 떨어짐, 옮길 거면 봉오리 보일 때 바로, 봉오리 과다 시 스스로 줄임; 섭씨 환산 55°F 약 13℃, 60°F 약 16℃, 65°F 약 18℃, 70°F 약 21℃"
+    source: "https://extension.umn.edu/houseplants/holiday-cacti"
+    checkedAt: "2026-11-20"
+  - id: F3
+    value: "꽃 진 뒤 마디 이음매에서 잘라 가지 늘리기(새 마디 1~2개), 6~8월 월 1회 절반 농도 비료, 가을 저질소 비료, 약간 뿌리가 꽉 찬 상태에서 꽃 잘 핌, 분갈이 3년마다; 뿌리파리는 늘 젖은 흙; 무름병은 물 최소·밑동에 물주기·감염 식물 폐기"
+    source: "https://extension.umn.edu/houseplants/holiday-cacti"
+    checkedAt: "2026-11-20"
+  - id: F4
+    value: "게발선인장 S. truncata 마디 2~4개 위로 향한 톱니, 11월 중순~12월 말 개화; 크리스마스 선인장 S. × buckleyi 톱니 없는 둥근 마디, 11월 말~2월 초; 크리스마스 선인장으로 파는 화분 대부분은 게발선인장 또는 교배종"
+    source: "https://yardandgarden.extension.iastate.edu/how-to/all-about-holiday-cacti"
+    checkedAt: "2026-11-20"
+  - id: F5
+    value: "꽃밥 색 게발선인장 노랑, 크리스마스 선인장 보랏빛 갈색; 판매되는 크리스마스 선인장 대부분이 게발선인장"
+    source: "https://extension.illinois.edu/blogs/good-growing/2022-12-09-how-identify-and-care-holiday-cacti-and-get-them-rebloom"
+    checkedAt: "2026-11-20"
+  - id: F6
+    value: "Christmas Cactus (Schlumbergera bridgesii) 개·고양이·말에 무독성"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/christmas-cactus"
+    checkedAt: "2026-11-20"
+  - id: F7
+    value: "배수 구멍 없는 용기는 과습 위험, 자신 없으면 배수 구멍 있는 화분"
+    source: "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentMain.ps?menuId=PS04108"
+    checkedAt: "2026-11-20"
