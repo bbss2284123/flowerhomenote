@@ -1,0 +1,21 @@
+facts:
+  - id: F1
+    value: "하루 한 번 물통에 물 1/5 넣고 흔들어 2회 이상 헹군 뒤 물 넣기, 하루 지난 물은 새 물로 교체, 진동자 부분 물은 배출구 쪽으로 기울여 제거, 진동자·물통 이틀마다 부드러운 스펀지나 천으로 닦고 1주일에 한 번 중성세제 세척 후 3회 이상 헹굼, 락스·비누·알칼리성·산성 세제·기름성분 유기세제 사용 금지, 2~3일 방치 시 세척 후 사용, 분무유도관·분출구 일주일에 한 번 솔·천으로"
+    source: "https://www.kca.go.kr/home/sub.do?menukey=4006&mode=view&no=1001163021"
+    checkedAt: "2026-11-19"
+  - id: F2
+    value: "물 이외 첨가물 금지(기관지 염증), 장기 미사용 후 세척 없이 사용 금지, 진동자는 흐르는 물 또는 부드러운 솔, 초음파식은 토출부로 세균·미생물 방출 가능해 물통·진동자 주기 세척, 가열식은 백화현상으로 주기 청소·화상 주의·전원 끄고 물이 완전히 식었을 때 열기, 복합식 주기적 물 교체, 기화식 필터 정기 교체, 분무 직접 흡입 금지, 기준선, 평탄한 곳, 주변 공간, 밀폐 공간 장시간 사용 금지"
+    source: "https://www.consumer.go.kr/user/ftc/consumer/scCmmUtil/79/userFileInfoDownload.do?fileDetailSn=04&fileGroupNo=000224837&funcType=colctInfoFunction"
+    checkedAt: "2026-11-19"
+  - id: F3
+    value: "가습기에 넣어 쓰는 화학제품은 환경부 승인 필요, 지금까지 오일·향균필터·향균제 등 승인된 제품 없음, 가습기에 넣어도 된다는 제품은 불법"
+    source: "https://www.korea.kr/news/policyNewsView.do?newsId=148929630"
+    checkedAt: "2026-11-19"
+  - id: F4
+    value: "가습기에는 수돗물 권장, 정수기물은 염소 등 소독성분이 제거돼 세균 번식 쉬움"
+    source: "https://news.seoul.go.kr/env/archives/34764"
+    checkedAt: "2026-11-19"
+  - id: F5
+    value: "수돗물 사용 권장(소독 처리로 세균 번식 가능성 적음), 약수·지하수는 미네랄이 많아 침전물(스케일) 많이 생김"
+    source: "https://www.lge.co.kr/support/solutions-1002481"
+    checkedAt: "2026-11-19"
