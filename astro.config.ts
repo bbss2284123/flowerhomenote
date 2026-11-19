@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
+import remarkGfm from "remark-gfm";
 import { writeFileSync } from "node:fs";
 import { siteConfig } from "./site.config";
 import { highlightParts } from "./src/lib/highlight";
@@ -109,8 +110,10 @@ export default defineConfig({
     },
   ],
   markdown: {
-    gfm: true,
-    remarkPlugins: [remarkHighlight],
+    // Disable Astro's built-in GFM so we can keep tables/task lists
+    // while treating a single tilde as a range mark, not strikethrough.
+    gfm: false,
+    remarkPlugins: [[remarkGfm, { singleTilde: false }], remarkHighlight],
     rehypePlugins: [rehypeArticle],
   },
 });
