@@ -1,0 +1,33 @@
+facts:
+  - id: F1
+    value: "Poinsettia (Euphorbia pulcherrima) 개·고양이·말 독성; 자극성 수액; 입·위 자극, 가끔 구토, 일반적으로 독성은 과장된 편"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/poinsettia"
+    checkedAt: "2026-11-21"
+  - id: F2
+    value: "Easter Lily (Lilium longiflorum) 고양이 독성, 개·말 비독성; 구토·식욕부진·무기력·신부전·사망 가능, 고양이만 영향"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/easter-lily"
+    checkedAt: "2026-11-21"
+  - id: F3
+    value: "FDA: 진짜 백합·원추리는 고양이에게 매우 위험, 줄기·잎·꽃·꽃가루·꽃병 물까지; 소량·꽃가루 핥기·꽃병 물로 3일 안 치명적 신부전 가능; 초기 증상 0~12시간; 18시간 이상 치료 지연 시 대개 비가역적; 개는 가벼운 배탈; 칼라·스파티필룸은 옥살산칼슘 자극; 은방울꽃은 개·고양이 모두 매우 위험; 고양이 있는 집엔 들이지 않기 권고; 병원에 식물 또는 사진 지참"
+    source: "https://www.fda.gov/animal-veterinary/animal-health-literacy/lovely-lilies-and-curious-cats-dangerous-combination"
+    checkedAt: "2026-11-21"
+  - id: F4
+    value: "Cyclamen spp 개·고양이·말 독성; 테르페노이드 사포닌; 침 흘림·구토·설사, 덩이줄기 대량 섭취 시 심장 박동 이상·발작·사망"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/cyclamen"
+    checkedAt: "2026-11-21"
+  - id: F5
+    value: "Amaryllis spp. 개·고양이·말 독성; 라이코린 등; 구토·처짐·설사·복통·침 흘림·식욕부진·떨림"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/amaryllis"
+    checkedAt: "2026-11-21"
+  - id: F6
+    value: "Holly (Ilex opaca) 개·고양이·말 독성; 사포닌; 구토·설사·처짐, 잎과 열매는 독성 낮음 / Hydrangea 개·고양이·말 독성; 구토·처짐·설사"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/holly"
+    checkedAt: "2026-11-21"
+  - id: F7
+    value: "Monstera deliciosa(Cutleaf Philodendron) 개·고양이 독성, 불용성 옥살산칼슘"
+    source: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/cutleaf-philodendron"
+    checkedAt: "2026-11-21"
+  - id: F8
+    value: "Christmas Cactus (Schlumbergera bridgesii), African Violet (Saintpaulia spp.) 개·고양이·말 비독성"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/christmas-cactus"
+    checkedAt: "2026-11-21"
