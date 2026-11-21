@@ -1,0 +1,33 @@
+facts:
+  - id: F1
+    value: "농사로 튤립 작형: 억제재배 아주심기 11월 하순~12월 상순, 촉성·반촉성 10월 중순~11월 상순; 아주심기 후 짚 멀칭; 저온처리 중 0℃ 이하 블라인드; 25℃ 이상 도장; 촉성 냉장 14~15℃ 2주 후 2~5℃ 6~8주; pH 6.5~6.9"
+    source: "https://www.nongsaro.go.kr/portal/ps/psb/psbl/workScheduleDtl.ps?cntntsNo=30693&menuId=PS00087&sKidofcomdtySeCode=210003&totalSearchYn=Y"
+    checkedAt: "2026-11-22"
+  - id: F2
+    value: "추식구근은 가을에 심고 겨울 저온(춘화) 후 봄 개화; 뿌리 아래·눈 위·구근 전체 묻기; 화분은 베란다 창가 7~10℃ 4주 이상; 과습 시 썩음, 마사토·펄라이트; 월동 불가 구근은 지상부 시든 뒤 캐서 그늘 보관"
+    source: "https://www.rda.go.kr/webzine/2024/04/sub2-6.html"
+    checkedAt: "2026-11-22"
+  - id: F3
+    value: "노지 구근 3배 깊이, 화분 2배 깊이 (아침고요원예수목원 이형진)"
+    source: "https://www.gardening.news/news/articleView.html?idxno=11925"
+    checkedAt: "2026-11-22"
+  - id: F4
+    value: "RHS: tulips in November; depth 2-3x height (5cm→10-15cm); spacing 2x width; firm gently, avoid treading; watering not critical if moist/autumn; late planting or long storage may flower poorly"
+    source: "https://www.rhs.org.uk/plants/types/bulbs/planting"
+    checkedAt: "2026-11-22"
+  - id: F5
+    value: "RHS: 튤립은 9~12월 심어도 잘 자람 (tulips grow well planted September–December, plant as soon as you can"
+    source: "https://www.rhs.org.uk/garden-inspiration/seasonal/planting-tulips-for-seasonal-colour"
+    checkedAt: "2026-11-22"
+  - id: F6
+    value: "RHS 수선화: 9월이 적기 (plant ideally September), depth 3x height; containers can be planted shallower/closer then moved to ground deeper; avoid waterlogged compost in winter"
+    source: "https://www.rhs.org.uk/plants/daffodils/growing-guide"
+    checkedAt: "2026-11-22"
+  - id: F7
+    value: "RHS tulip fire Botrytis tulipae: twisted leaves, brown spots; remove plants; avoid replanting tulips there for at least 3 years"
+    source: "https://www.rhs.org.uk/disease/tulip-fire"
+    checkedAt: "2026-11-22"
+  - id: F8
+    value: "ASPCA tulip: toxic to dogs, cats, horses; tulipalin A/B; vomiting, depression, diarrhea, hypersalivation; highest in bulb"
+    source: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/tulip"
+    checkedAt: "2026-11-22"
