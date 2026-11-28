@@ -164,7 +164,7 @@ test("하루 발행 상한과 빈 광고 값", () => {
   assert.equal(siteConfig.maxPostsPerDay, 2);
   assert.equal(siteConfig.url, "https://flowerhomenote.com");
   assert.equal(siteConfig.adsense.publisherId, "");
-  assert.equal(siteConfig.ga4Id, "");
+  assert.equal(siteConfig.ga4Id, "G-WBB8051E4R");
   assert.equal(siteConfig.cloudflareWebAnalyticsToken, "");
   assert.equal(siteConfig.verification.google, "");
   assert.equal(siteConfig.verification.naver, "34efb706d4fe9f1c1026f2148183ed9428533795");
